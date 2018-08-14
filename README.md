@@ -37,13 +37,15 @@ material-letter-icons --help
     -h, --help         output usage information
     -V, --version      output the version number
     -c, --chars <$#@>  generate icons for custom characters (no seperator)
+    -h, --height [pixels] specify height of image to be generated (default 512)
+    -w, --width [pixels] specify width of image to be generated (default 512)
 ```
 
 ## Troubleshooting
 
 ###### EACCES - Permission Denied
 
-You probably don't have write access to your global `node_modules` folder. Work around this error by prefixing the commands with `sudo`, or check out [fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) to `chown` those directories. 
+You probably don't have write access to your global `node_modules` folder. Work around this error by prefixing the commands with `sudo`, or check out [fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) to `chown` those directories.
 
 ## License
 Apache 2.0
