@@ -9,6 +9,8 @@ var generator = require('./lib/generator');
 program
     .version('1.0.0')
     .option('-c, --chars <$#@>', 'generate icons for custom characters (no seperator)')
+    .option('-h, --height [h]', 'specify height of generated png', 512)
+    .option('-w, --width [w]', 'specify width of generated png ', 512)
     .parse(process.argv);
 
 // Developer didn't provide any custom characters?
@@ -21,6 +23,7 @@ else {
     // Let them know it's possible to do so via CLI argument
     log.info('material-letter-icons', 'Generating icons for custom characters: ' + program.chars);
 }
+log.info("generating sizes, height: " + program.height + ", width: " + program.width);
 
 // Generate the icons and export them to dist/
 generator.generateIcons(program, function (err) {
@@ -31,7 +34,7 @@ generator.generateIcons(program, function (err) {
 
     // Build path to dist/ folder for convenience
     var outputPath = __dirname + '/' + config.dist.path;
-    
+
     // Print out success message
     log.info('material-letter-icons', 'Icons generated successfully');
     log.info('material-letter-icons', 'Output path: ' + outputPath);

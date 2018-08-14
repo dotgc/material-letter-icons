@@ -20,12 +20,6 @@ module.exports = {
         png: {
             // PNG icon output directory
             outputPath: 'png/',
-            
-            // PNG icon output dimensions
-            dimensions: {
-                width: 512,
-                height: 512
-            }
         }
     }
 };
